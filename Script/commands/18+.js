@@ -5,7 +5,7 @@ module.exports.config = {
   hasPermssion: 2,
   credits: "Mohammad Akash",
   description: "18+ VIDEOS",
-  commandCategory: "video",
+  commandCategory: "18+",
   usages: "/18+",
   cooldowns: 5,
   // aliases ড্রপ করা হয়েছে
