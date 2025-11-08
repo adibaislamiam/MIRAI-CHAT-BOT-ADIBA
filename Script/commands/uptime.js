@@ -50,7 +50,7 @@ function roundRect(ctx, x, y, w, h, r, fill = false, stroke = false) {
 }
 
 module.exports.config = {
-  name: "uptime",
+  name: "up",
   aliases: ["up", "upt"],
   version: "1.0.6",
   hasPermssion: 0,
