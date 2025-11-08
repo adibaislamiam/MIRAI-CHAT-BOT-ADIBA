@@ -113,17 +113,17 @@ module.exports.handleEvent = async ({ api, event, Users }) => {
  if (!event.body || !s) return;
  const text = event.body.toLowerCase().trim();
  const sName = await Users.getNameUser(event.senderID);
- const triggers = ["baby", "bby", "xan", "bbz", "mari", "মারিয়া"];
+ const triggers = ["baby", "bby", "xan", "bbz", "mari", "bot", "বট", "বেবি"];
 
  if (triggers.includes(text)) {
  const replies = [
- "𝐀𝐬𝐬𝐚𝐥𝐚𝐦𝐮 𝐰𝐚𝐥𝐚𝐢𝐤𝐮𝐦 ♥",
- "বলেন sir__😌",
- "𝐁𝐨𝐥𝐨 𝐣𝐚𝐧 𝐤𝐢 𝐤𝐨𝐫𝐭𝐞 𝐩𝐚𝐫𝐢 𝐭𝐨𝐦𝐫 𝐣𝐨𝐧𝐧𝐨 🐸",
- "মুড়ি খাও 🫥",
- "লুঙ্গি টা ধর মুতে আসি🙊🙉",
- "──‎ 𝐇𝐮𝐌..? 👉👈",
- "𝐇ᴇʏ 𝐗ᴀɴ 𝐈’ᴍ 𝐌ᴀ𝐫ɪ𝐚 𝐁ᴀ𝐛𝐲✨"
+ "হ্যা জান বলো 🤌💋💋",
+ "তুমি কি আমায় ভালোবাসো 🥺❤️‍🩹",
+ "জান তুমার নুনুতে উম্মমাহ 🤌🥺",
+ "বুকাচুদা 😠! আর কত বট বট করবি",
+ "আকাশ তুমি কোথায় 🥺",
+ "─তোদের জ্বালায় লিভ নিমু গ্রুপ থেকে 😠🤬",
+ "কাছে আসো জান 🥺"
  ];
 
  await __callTyping(api, event.threadID, 5000);
@@ -136,7 +136,7 @@ module.exports.handleEvent = async ({ api, event, Users }) => {
  );
  }
 
- const matchPrefix = /^(baby|bby|xan|bbz|mari|মারিয়া)\s+/i;
+ const matchPrefix = /^(baby|bby|xan|bbz|oii|জান|বট|বেবি|jan)\s+/i;
  if (matchPrefix.test(text)) {
  const q = text.replace(matchPrefix, "").trim();
  if (!q) return;
