@@ -4,7 +4,7 @@ module.exports.config = {
  hasPermssion: 0,
  credits: "rX",
  description: "Lấy ID người dùng.",
- commandCategory: "box chat",
+ commandCategory: "Fun",
  cooldowns: 0
 };
 
