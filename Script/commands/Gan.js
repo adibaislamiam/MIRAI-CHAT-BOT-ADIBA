@@ -9,7 +9,7 @@ module.exports.config = {
  hasPermission: 0,
  credits: "𝐀𝐊𝐀𝐒𝐇",
  description: "Play random song with prefix command",
- commandCategory: "music",
+ commandCategory: "media",
  usages: "[prefix]gan",
  cooldowns: 5
 };
