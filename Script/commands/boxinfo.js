@@ -3,16 +3,16 @@ const request = require("request");
 
 module.exports.config = {
   name: "boxinfo",
-  version: "2.2.0",
+  version: "2.3.0",
   hasPermssion: 1,
-  credits: "Modified by RX Abdullah",
-  description: "Get stylish group info with same image system",
+  credits: "MOHAMMAD AKASH",
+  description: "Get stylish group info with fancy 𝙰𝚋𝚌 font",
   commandCategory: "Box",
   usages: "groupinfo",
   cooldowns: 2
 };
 
-module.exports.run = async function ({ api, event }) {
+module.exports.run = async function({ api, event }) {
   const threadInfo = await api.getThreadInfo(event.threadID);
   const members = threadInfo.participantIDs.length;
   const admins = threadInfo.adminIDs.length;
@@ -20,7 +20,7 @@ module.exports.run = async function ({ api, event }) {
   const groupName = threadInfo.threadName || "Unnamed Group";
   const groupID = threadInfo.threadID;
   const totalMsg = threadInfo.messageCount || 0;
-  const approvalMode = threadInfo.approvalMode ? "🟢 Turned ON" : "🔴 Turned OFF";
+  const approvalMode = threadInfo.approvalMode ? "🟢 𝙾𝙽" : "🔴 𝙾𝙵𝙵";
   const groupImage = threadInfo.imageSrc;
 
   // Gender Count
@@ -37,23 +37,22 @@ module.exports.run = async function ({ api, event }) {
   }).filter(Boolean);
 
   const msg = `
-╭───× 𝐆𝐫𝐨𝐮𝐩 𝐈𝐧𝐟𝐨 ×───╮
-│ ᰔ 𝐌𝐚𝐫𝐢𝐚 × 𝐑𝐗 𝐂𝐡𝐚𝐭𝐛𝐨𝐭
-│ ───×
-│ 𝐍𝐚𝐦𝐞: ${groupName}
-│ 𝐆𝐫𝐨𝐮𝐩 𝐢𝐝: ${groupID}
-│ 𝐀𝐩𝐩𝐫𝐨𝐯𝐚𝐥: ${approvalMode}
-│ 𝐄𝐦𝐨𝐣𝐢: ${emoji}
-│ ───×
-│ 👥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬: ${members}
-│ ♂️ 𝐌𝐚𝐥𝐞: ${male}
-│ ♀️ 𝐅𝐞𝐦𝐚𝐥𝐞: ${female}
-│ ───×
-│ 👑 𝐚𝐝𝐦𝐢𝐧𝐬 (${admins}):
+╭───────────⭓
+│ 💎 𝗚𝗥𝗢𝗨𝗣 𝗜𝗡𝗙𝗢 💎
+│─────────────────
+│ 📛 𝙽𝚊𝚖𝚎: 𝙼𝚒𝚛𝚊𝚒 𝙱𝚘𝚝 𝚂𝚞𝚙𝚙𝚘𝚛𝚝
+│ 🆔 𝙸𝙳: ${groupID}
+│ 🔐 𝙰𝚙𝚙𝚛𝚘𝚟𝚊𝚕: ${approvalMode}
+│ 😀 𝙴𝚖𝚘𝚓𝚒: ${emoji}
+│─────────────────
+│ 👥 𝙼𝚎𝚖𝚋𝚎𝚛𝚜: ${members}
+│ 👨 𝙼𝚊𝚕𝚎: ${male} | 👩 𝙵𝚎𝚖𝚊𝚕𝚎: ${female}
+│─────────────────
+│ 👑 𝙰𝚍𝚖𝚒𝚗𝚜 (${admins.length}):
 │ ${adminList.join("\n│ ")}
-│ ───×
-│ 💬 𝐓𝐨𝐭𝐚𝐥 𝐌𝐞𝐬𝐬𝐚𝐠𝐞: ${totalMsg} msgs
-╰─────────────⧕
+│─────────────────
+│ 💬 𝚃𝚘𝚝𝚊𝚕 𝙼𝚎𝚜𝚜𝚊𝚐𝚎𝚜: ${totalMsg}
+╰───────────────⭓
 `.trim();
 
   const callback = () => {
