@@ -98,5 +98,6 @@ original credit set to **Rx Abdullah**, and polished for **ready-to-use** releas
 # ⚙️ Install Dependencies
 + npm install
 
-# 🚀 Start Bot
+### 🚀 Start Bot
+```bash
 + node Rxabdullah.js
